@@ -38,24 +38,24 @@ public class  UserProfileService {
 
     }
 
-//        public void updateUserProfile(UserProfile userProfile, HttpSession session) {
-//
-//        User user = (User) session.getAttribute("loggedInUser");
-//
-//        user.setName(userProfile.getName());
-//        user.setEmail(userProfile.getEmail());
-//        user.setMobileNumber(userProfile.getMobileNumber());
-//
-//        if (user.getAddress() == null || !(user.getAddress().getAddressId() > 0))
-//            user.setAddress(new Address());
-//
-//        user.getAddress().setAddress1(userProfile.getAddress1());
-//        user.getAddress().setAddress2(userProfile.getAddress2());
-//        user.getAddress().setCity(userProfile.getCity());
-//        user.getAddress().setState(userProfile.getState());
-//        user.getAddress().setZipCode(userProfile.getZipCode());
-//
-//        userRepository.save(user);
-//    }
+        public void updateUserProfile(UserProfile userProfile, HttpSession session) {
+
+        User user = (User) session.getAttribute("loggedInUser");
+
+        user.setName(userProfile.getName());
+        user.setEmail(userProfile.getEmail());
+        user.setMobileNumber(userProfile.getMobileNumber());
+
+        if (user.getAddress() == null || !(user.getAddress().getAddressId() > 0))
+            user.setAddress(new Address());
+
+        user.getAddress().setAddress1(userProfile.getAddress1());
+        user.getAddress().setAddress2(userProfile.getAddress2());
+        user.getAddress().setCity(userProfile.getCity());
+        user.getAddress().setState(userProfile.getState());
+        user.getAddress().setZipCode(userProfile.getZipCode());
+
+        userRepository.save(user);
+    }
 
 }

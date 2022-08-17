@@ -47,7 +47,7 @@ Author URL: http://w3layouts.com
       <li class="alert alert-danger" role="alert" th:each="error : ${#fields.errors('userProfile.*')}" th:text="${error}" />
     </ul>
 
-    <form th:action="@{/updateProfile}" method="post" class="signin-form" th:object="${userProfile}">
+    <form th:action="@{/updateProfile}" method="get" class="signin-form" th:object="${userProfile}">
 
         <div class="row">
           <div class="col-lg-4">
