@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
 
 @Service
-public class UserProfileService {
+public class  UserProfileService {
 
     @Autowired
     private UserRepository userRepository;

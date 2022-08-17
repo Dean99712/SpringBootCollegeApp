@@ -20,7 +20,9 @@ public class  UserProfileController {
     private UserProfileService userProfileService;
 
     @GetMapping("/displayProfile")
-    public ModelAndView displayUserProfile() {
+    public ModelAndView displayUserProfile(HttpSession session) {
+
+        UserProfile userProfile  = userProfileService.getUserProfile(session);
 
         ModelAndView modelAndView = new ModelAndView("userProfile.html");
         modelAndView.addObject("userProfile", new UserProfile());
