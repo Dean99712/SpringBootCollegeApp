@@ -25,7 +25,7 @@ public class  UserProfileController {
         UserProfile userProfile  = userProfileService.getUserProfile(session);
 
         ModelAndView modelAndView = new ModelAndView("userProfile.html");
-        modelAndView.addObject("userProfile", new UserProfile());
+        modelAndView.addObject("userProfile", userProfile);
 
         return modelAndView;
     }
