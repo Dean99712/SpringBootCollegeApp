@@ -30,14 +30,14 @@ public class  UserProfileController {
         return modelAndView;
     }
 
-//    @PostMapping("/updateProfile")
-//    public String updateProfile(@Valid @ModelAttribute("userProfile") UserProfile userProfile, Errors errors, HttpSession session) {
-//
-//        if (errors.hasErrors())
-//            return "userProfile.html";
-//
-//        userProfileService.updateUserProfile(userProfile, session);
-//
-//        return "redirect:/displayProfile";
-//    }
+    @PostMapping("/updateProfile")
+    public String updateProfile(@Valid @ModelAttribute("userProfile") UserProfile userProfile, Errors errors, HttpSession session) {
+
+        if (errors.hasErrors())
+            return "userProfile.html";
+
+        userProfileService.updateUserProfile(userProfile, session);
+
+        return "redirect:/displayProfile";
+    }
 }
